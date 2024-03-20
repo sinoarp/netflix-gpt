@@ -5,11 +5,11 @@ export const USER_AVATAR =
   "https://occ-0-6245-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABaxYSSE1RgnJVssGUxJib99V2gcstOSkhIu2yt4ER_lr4tN0jKSBQbVOK8bj-hQ3MeJv2MUOOLQHDqU0kZXKWRKXo2-avEI.png?r=026";
 
 export const API_OPTIONS = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjN2U5Y2NjMGVkZTgzMDZmNTJhMWVmZTc5Y2UwZDY2ZSIsInN1YiI6IjY1ZjU0ZWQxMTU2Y2M3MDE3ZTYxYjYwMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E_8CZ28SX4-Azvda4fGfnHdpaWMlCeC8peSHjm0xTj0'
-  }
+    accept: "application/json",
+    Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
+  },
 };
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";
@@ -22,3 +22,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
